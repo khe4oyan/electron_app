@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "0.0.2",
+  "description": "Just App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "nodemon": "nodemon --watch main.js --exec npm start",
+    "build": "electron-builder"
+  },
+  "author": "NERUS",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "nodemon": "^3.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
