@@ -9,3 +9,8 @@ electronAPI.onDownloadNewVersionInstaller((response) => {
 	a.download = response;
 	a.click();
 });
+
+const button = document.querySelector('#msgButton');
+button.addEventListener("click", () => {
+	electronAPI.sendMessage();
+});

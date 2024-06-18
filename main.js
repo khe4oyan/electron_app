@@ -22,7 +22,6 @@ const createWindow = () => {
       const remoteVersion = d.name
       const localVersion = app.getVersion()
       
-      
       console.log('========= #1.1');
       console.log(remoteVersion, localVersion);
       
@@ -39,6 +38,10 @@ const createWindow = () => {
     });
   });
 };
+
+ipcMain.on('msg', (e, msg) => {
+  console.log(msg);
+});
 
 app.whenReady().then(() => {
   createWindow();

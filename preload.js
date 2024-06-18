@@ -11,5 +11,8 @@ contextBridge.exposeInMainWorld("electronAPI", {
 		ipcRenderer.on('onDownloadNewVersionInstaller', (_, response) => {
 			callback(response);
 		});
+	},
+	sendMessage() {
+		ipcRenderer.send('msg', 'message');
 	}
 });
